@@ -13,10 +13,10 @@ class Chambre {
 
   factory Chambre.fromJson(Map<String, dynamic> json) {
     return Chambre(
-      number: json['number'],
-      floor: json['floor'],
-      capacity: json['capacity'],
-      status: json['status'],
+      number: json['number']?.toString() ?? '',
+      floor: json['floor']?.toString() ?? '',
+      capacity: json['capacity']?.toInt() ?? 0,
+      status: json['status']?.toString() ?? 'free',
     );
   }
 }

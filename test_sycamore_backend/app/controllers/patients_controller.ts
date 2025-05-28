@@ -2,10 +2,6 @@ import Patient from '#models/patient'
 import Room from '#models/room'
 import { HttpContext } from '@adonisjs/core/http'
 
-/**
- * Contrôleur gérant les opérations CRUD pour les patients
- * Gère automatiquement le statut des chambres lors de l'assignation des patients
- */
 export default class PatientsController {
   /**
    * Liste tous les patients avec leurs chambres assignées

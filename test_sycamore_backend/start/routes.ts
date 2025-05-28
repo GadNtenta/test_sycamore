@@ -25,6 +25,6 @@ router.group(() => {
 // Route de test par défaut
 router.get('/', async () => {
   return {
-    hello: 'world',
+    hello: 'world I am Gad',
   }
 })

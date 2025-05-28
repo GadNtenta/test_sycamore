@@ -13,10 +13,10 @@ class Patient {
 
   factory Patient.fromJson(Map<String, dynamic> json) {
     return Patient(
-      firstName: json['firstName'],
-      lastName: json['lastName'],
-      age: json['age'],
-      healthStatus: json['healthStatus'],
+      firstName: json['firstName']?.toString() ?? '',
+      lastName: json['lastName']?.toString() ?? '',
+      age: json['age']?.toInt() ?? 0,
+      healthStatus: json['healthStatus']?.toString() ?? 'stable',
     );
   }
 }

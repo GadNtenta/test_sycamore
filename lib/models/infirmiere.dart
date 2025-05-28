@@ -13,10 +13,10 @@ class Infirmiere {
 
   factory Infirmiere.fromJson(Map<String, dynamic> json) {
     return Infirmiere(
-      firstName: json['firstName'],
-      lastName: json['lastName'],
-      service: json['service'],
-      phone: json['phone'],
+      firstName: json['firstName']?.toString() ?? '',
+      lastName: json['lastName']?.toString() ?? '',
+      service: json['service']?.toString() ?? '',
+      phone: json['phone']?.toString() ?? '',
     );
   }
 }

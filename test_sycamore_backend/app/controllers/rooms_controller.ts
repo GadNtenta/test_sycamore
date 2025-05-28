@@ -1,10 +1,6 @@
 import Room from '#models/room'
 import { HttpContext } from '@adonisjs/core/http'
 
-/**
- * Contrôleur gérant les opérations CRUD pour les chambres
- * Inclut la gestion du statut des chambres (libre/occupée)
- */
 export default class RoomsController {
   /**
    * Liste toutes les chambres
