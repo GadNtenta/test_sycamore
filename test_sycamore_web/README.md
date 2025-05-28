@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interface Web Sycamore
 
-## Getting Started
+Interface web de gestion hospitalière développée avec Next.js et Tailwind CSS.
 
-First, run the development server:
+## Fonctionnalités
+
+- 🌐 Interface web moderne et responsive
+- 👨‍⚕️ Gestion des médecins
+- 👩‍⚕️ Gestion des infirmières
+- 🏥 Gestion des chambres
+- 👥 Gestion des patients
+- 🔄 Mise à jour en temps réel
+- 🌙 Mode sombre/clair
+- 📱 Design adaptatif
+
+## Prérequis
+
+- Node.js (v18+)
+- npm ou yarn
+- Un navigateur moderne
+
+## Installation
+
+1. Cloner le projet :
+
+```bash
+git clone https://github.com/GadNtenta/test_sycamore.git
+cd test_sycamore/test_sycamore_web
+```
+
+2. Installer les dépendances :
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Configurer l'environnement :
+
+- Créer un fichier `.env.local` à la racine du projet
+- Ajouter les variables d'environnement nécessaires :
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3333
+```
+
+4. Lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure du Code
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/                # Pages et routes Next.js
+├── components/        # Composants réutilisables
+├── lib/              # Utilitaires et configurations
+├── services/         # Services (API, etc.)
+└── styles/          # Styles globaux
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Développement
 
-## Learn More
+### Commandes Utiles
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` : Lancer le serveur de développement
+- `npm run build` : Générer la version de production
+- `npm run start` : Démarrer la version de production
+- `npm run lint` : Vérifier le code avec ESLint
+- `npm run test` : Exécuter les tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Bonnes Pratiques
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Suivre les conventions de nommage React/Next.js
+2. Utiliser les composants fonctionnels
+3. Implémenter la gestion d'état avec React Context
+4. Gérer les erreurs et les états de chargement
+5. Tester les composants et les services
 
-## Deploy on Vercel
+## Déploiement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Vercel (Recommandé)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Installer Vercel CLI :
+
+```bash
+npm i -g vercel
+```
+
+2. Déployer :
+
+```bash
+vercel
+```
+
+### Autres Plateformes
+
+1. Générer la version de production :
+
+```bash
+npm run build
+```
+
+2. Démarrer le serveur :
+
+```bash
+npm run start
+```
+
+## Technologies Utilisées
+
+- Next.js 14
+- React 18
+- Tailwind CSS
+- TypeScript
+- ESLint
+- Prettier
+
+## Contribution
+
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
+
+## Licence
+
+Ce projet est sous licence MIT.
