@@ -8,23 +8,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:test_sycamore_app/main.dart';
+import '../lib/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Test de l\'interface principale', (WidgetTester tester) async {
+    // Construction de l'application
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Vérification du titre de l'application
+    expect(find.text('Hôpital Sycamore'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Vérification de la présence des onglets de navigation
+    expect(find.byIcon(Icons.medical_services), findsOneWidget);
+    expect(find.byIcon(Icons.health_and_safety), findsOneWidget);
+    expect(find.byIcon(Icons.bed), findsOneWidget);
+    expect(find.byIcon(Icons.person), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Vérification des labels des onglets
+    expect(find.text('Médecins'), findsOneWidget);
+    expect(find.text('Infirmières'), findsOneWidget);
+    expect(find.text('Chambres'), findsOneWidget);
+    expect(find.text('Patients'), findsOneWidget);
+
+    // Vérification du bouton de rafraîchissement
+    expect(find.byIcon(Icons.refresh), findsOneWidget);
   });
 }

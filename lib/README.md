@@ -53,7 +53,6 @@ lib/
 ├── models/              # Modèles de données
 ├── screens/            # Écrans de l'application
 ├── widgets/           # Widgets réutilisables
-└── utils/            # Utilitaires et helpers
 ```
 
 ## Développement
